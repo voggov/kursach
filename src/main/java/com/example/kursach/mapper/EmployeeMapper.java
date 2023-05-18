@@ -2,7 +2,7 @@ package com.example.kursach.mapper;
 
 import com.example.kursach.dto.EmployeeRqDto;
 import com.example.kursach.dto.EmployeeRsDto;
-import com.example.kursach.model.Employee;
+import com.example.kursach.model.Animal;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component;
 public class EmployeeMapper {
     private ModelMapper modelMapper = new ModelMapper();
 
-    public EmployeeRsDto mapToDto(Employee employee) {
-        return modelMapper.map(employee, EmployeeRsDto.class);
+    public EmployeeRsDto mapToDto(Animal animal) {
+        return modelMapper.map(animal, EmployeeRsDto.class);
     }
-    public Employee mapToEmployee(EmployeeRqDto rqDto) {
-        return modelMapper.map(rqDto, Employee.class);
+    public Animal mapToEmployee(EmployeeRqDto rqDto) {
+        return modelMapper.map(rqDto, Animal.class);
     }
 }

@@ -1,9 +1,6 @@
 package com.example.kursach.dto;
 
-import com.example.kursach.model.Employee;
 import lombok.*;
-
-import java.util.List;
 
 @Getter
 @Setter

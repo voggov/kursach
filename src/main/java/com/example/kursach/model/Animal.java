@@ -10,15 +10,13 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Employee {
+public class Animal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @Column(name = "second_name")
-    private String secondName;
-    private String position;
-    private Double salary;
+    private String country;
+    private Integer age;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "event_id")
     private Event event;

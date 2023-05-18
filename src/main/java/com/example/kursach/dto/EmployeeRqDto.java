@@ -11,8 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 public class EmployeeRqDto {
     private String name;
-    private String secondName;
-    private String position;
-    private Double salary;
+    private String country;
+    private Integer age;
     private EventRqDto event;
 }

@@ -17,5 +17,5 @@ public class Event {
     private Long id;
     private String theme;
     @OneToOne()
-    private Employee responsible;
+    private Animal responsible;
 }

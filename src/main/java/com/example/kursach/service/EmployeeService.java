@@ -3,7 +3,7 @@ package com.example.kursach.service;
 import com.example.kursach.dto.EmployeeRqDto;
 import com.example.kursach.dto.EmployeeRsDto;
 import com.example.kursach.mapper.EmployeeMapper;
-import com.example.kursach.model.Employee;
+import com.example.kursach.model.Animal;
 import com.example.kursach.model.Event;
 import com.example.kursach.repository.EmployeeRepository;
 import com.example.kursach.repository.EventRepository;
@@ -31,18 +31,17 @@ public class EmployeeService {
 
     public EmployeeRsDto addEmployee(EmployeeRqDto employeeRqDto) {
 
-        Employee newEmployee = Employee.builder()
+        Animal newAnimal = Animal.builder()
                 .name(employeeRqDto.getName())
-                .secondName(employeeRqDto.getSecondName())
-                .position(employeeRqDto.getPosition())
-                .salary(employeeRqDto.getSalary())
+                .age(employeeRqDto.getAge())
+                .country(employeeRqDto.getCountry())
                 .build();
         Event newEvent = Event.builder()
                 .theme(employeeRqDto.getEvent().getTheme())
                 .build();
-        newEmployee.setEvent(newEvent);
-        employeeRepository.save(newEmployee);
-        return mapper.mapToDto(newEmployee);
+        newAnimal.setEvent(newEvent);
+        employeeRepository.save(newAnimal);
+        return mapper.mapToDto(newAnimal);
     }
 
     public List<EmployeeRsDto> getEmployees() {
